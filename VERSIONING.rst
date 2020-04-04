@@ -1,0 +1,9 @@
+**********
+Versioning
+**********
+
+not-grep releases follow `Semantic Versioning`_.
+
+
+
+.. _Semantic Versioning: https://semver.org
