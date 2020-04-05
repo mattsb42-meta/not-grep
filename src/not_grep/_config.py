@@ -5,16 +5,9 @@ from typing import IO, Callable, Iterable, Mapping, Sequence
 import attr
 import toml
 
-from .checkers import not_present, output_test, present
+from ._plugin_loader import load_plugin
 
 __all__ = ("Config", "SingleCheck")
-
-
-def _load_plugin(name: str) -> Callable[[str, str], bool]:
-    """Load a named plugin."""
-    return {"present": present, "not-present": not_present, "output-test": output_test}[
-        name
-    ]
 
 
 @attr.s(auto_attribs=True)
@@ -45,7 +38,7 @@ class Config:
         all_checks = {}
         for checker_name, checks in parsed.items():
             # 2a. Load the checker plugin
-            checker_module = _load_plugin(checker_name)
+            checker_module = load_plugin(checker_name)
             # 2b. Add a check for the plugin for each requested glob and pattern.
             all_checks[checker_name] = [
                 SingleCheck(

@@ -1,0 +1,18 @@
+[present]
+"src/**/*.py" = "__all__"
+
+[not-present]
+"src/**/*.py" = """
+This should be a unique value
+that is not present in any files.
+If it ever is, that will be weird.
+"""
+"test/**/*.py" = """
+This should be a unique value
+that is not present in any files.
+If it ever is, that will be weird.
+"""
+
+[output-test]
+"*.rst" = "pass"
+"**/*.py" = "pass"
