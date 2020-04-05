@@ -4,7 +4,7 @@ author: mattsb42
 inputs:
     config-file:
         description: Location of config file in repo
-        default: .github/not-grep.yml
+        default: .github/not-grep.toml
         required: false
     debug:
         description: Enables debug logging if set

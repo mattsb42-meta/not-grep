@@ -101,3 +101,17 @@ In lower verbosity levels, ``not-grep`` only shows failed checks.
     ******************************************************
     src/foo/__init__.py.............................. PASS
     src/foo/bar.py................................... PASS
+
+Awesome! Can I use it in GitHub Actions?
+========================================
+
+Yes. Yes you can.
+
+.. code-block:: yaml
+
+    - uses: mattsb42/not-grep@master
+      with:
+        # If you don't set config-file the action uses ".github/not-grep.toml".
+        config-file: ./github/config/check-things.toml
+        # If you don't set debug, passing checks will be hidden.
+        debug: true
