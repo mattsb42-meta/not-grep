@@ -1,6 +1,6 @@
 """Parse a config file."""
 import glob
-from typing import IO, Callable, Iterable, Mapping, Sequence
+from typing import Callable, Iterable, Mapping, Sequence
 
 import attr
 import toml
@@ -30,10 +30,11 @@ class Config:
     checks: Mapping[str, Sequence[SingleCheck]]
 
     @classmethod
-    def parse(cls, config_file: IO) -> "Config":
+    def parse(cls, config_file_path: str) -> "Config":
         """Parse a config file and load the requested checks."""
         # 1. Parse config file
-        parsed = toml.load(config_file)
+        with open(config_file_path, "r") as config_file:
+            parsed = toml.load(config_file)
         # 2. For each checker:
         all_checks = {}
         for checker_name, checks in parsed.items():
