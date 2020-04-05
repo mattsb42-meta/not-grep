@@ -1,0 +1,11 @@
+[present]
+"src/**/*.py" = """
+This should be a unique value
+that is not present in any files.
+If it ever is, that will be weird.
+"""
+"test/**/*.py" = """
+This should be a unique value
+that is not present in any files.
+If it ever is, that will be weird.
+"""

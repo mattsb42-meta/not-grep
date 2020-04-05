@@ -15,11 +15,89 @@ not-grep
    :alt: Code style: black
 
 .. image:: https://readthedocs.org/projects/not-grep/badge/
-   :target: https://not-grep.readthedocs.io/en/stable/
+   :target: https://not-grep.readthedocs.io
    :alt: Documentation Status
 
 .. important::
 
     This project is a work in progress and is not yet ready for use.
 
-kinda like grep but not quite
+``not-grep`` is kind of like grep, but not quite the same.
+
+WAT?
+====
+
+If you have ever found the need to inspect a file for particular patterns,
+you probably used ``grep``.
+
+.. code-block:: bash
+
+    grep FooClassName file.py
+
+If you needed to do that for a lot of files, you might have combined it with ``find``.
+
+.. code-block:: bash
+
+    find . -type f -name "*.py" -exec grep -n file.py {} /dev/null \;
+
+This works great for one-off checks
+but less great if you need to do those checks repeatedly,
+if you need to do lots of such checks,
+if you need to do those checks somewhere that you don't have access to ``grep``,
+or if you need to do things that ``grep`` cannot do
+(ex: show all files that to *not* match a pattern).
+
+Not Grep?
+=========
+
+``not-grep`` is designed for static use, not ad-hoc use.
+This is why it gets its configuration from a config file, not the CLI.
+Because of this, the ``not-grep`` CLI is very simple:
+the only things you can specify are the config file and verbosity.
+
+.. code-block:: bash
+
+    not-grep config.toml -vv
+
+Inside the config file, things start to get interesting.
+
+``not-grep`` is built around checker plugins.
+Each plugin takes a map as input:
+the file glob pattern for the files you want to check
+and a value that tells the plugin what to do with that file.
+
+The config file is a collection of groups.
+The group name identifies the plugin
+and the group contents are the input to that plugin.
+
+.. code-block:: toml
+
+    # The "present" checker will error unless the specified value is present.
+    [present]
+    "src/**/*.py" = "__all__"
+
+    # The "not-present" checker will error if the specified value is present.
+    [not-present]
+    "src/**/*.py" = "FooClassName"
+
+
+The output shows you, for each plugin,
+whether each matched file met or failed the plugin requirements.
+In lower verbosity levels, ``not-grep`` only shows failed checks.
+
+.. code-block:: bash
+
+    $ not-grep --config config.toml -vv
+    ================Running present checks================
+    -----------Checking src/**/*.py for pattern-----------
+    __all__
+    ******************************************************
+    src/foo/__init__.py.............................. PASS
+    src/foo/bar.py................................... FAIL
+
+    ==============Running not-present checks==============
+    -----------Checking src/**/*.py for pattern-----------
+    FooClassName
+    ******************************************************
+    src/foo/__init__.py.............................. PASS
+    src/foo/bar.py................................... PASS
