@@ -11,7 +11,7 @@ __all__ = ("__version__", "cli")
 
 __version__ = "0.0.1"
 _DEBUG = "INPUT_DEBUG"
-_CONFIG_FILE = "INPUT_CONFIG"
+_CONFIG_FILE = "INPUT_CONFIG-FILE"
 
 
 @click.command()
