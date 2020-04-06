@@ -19,3 +19,19 @@ def output_test(filename: str, pattern: str) -> bool:  # pylint: disable=unused-
     Always passes if ``pattern == "pass"``. Otherwise, fails.
     """
     return pattern == "pass"
+
+
+def prefix(filename: str, pattern: str) -> bool:
+    """Check that ``filename`` starts with ``pattern``."""
+    with open(filename, "r") as data:
+        data_prefix = data.read(len(pattern))
+        return data_prefix == pattern
+
+
+def suffix(filename: str, pattern: str) -> bool:
+    """Check that ``filename`` ends with ``pattern``."""
+    offset = -1 * len(pattern)
+    with open(filename, "r") as data:
+        data.seek(offset, 2)
+        data_suffix = data.read(len(pattern))
+        return data_suffix == pattern

@@ -78,6 +78,8 @@ setup(
             "present=not_grep.checkers:present",
             "not-present=not_grep.checkers:not_present",
             "output-test=not_grep.checkers:output_test",
+            "prefix=not_grep.checkers:prefix",
+            "suffix=not_grep.checkers:suffix",
         ],
     },
 )
