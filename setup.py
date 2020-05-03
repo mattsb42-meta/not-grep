@@ -75,7 +75,7 @@ setup(
     entry_points={
         "console_scripts": ["not-grep=not_grep:cli"],
         "not_grep.checker": [
-            "present=not_grep.checkers:present",
+            "include=not_grep.checkers:include",
             "exclude=not_grep.checkers:exclude",
             "output-test=not_grep.checkers:output_test",
             "prefix=not_grep.checkers:prefix",

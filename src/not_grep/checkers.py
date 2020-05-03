@@ -1,16 +1,16 @@
 """Built-in checkers."""
-__all__ = ("present", "exclude", "output_test")
+__all__ = ("include", "exclude", "output_test")
 
 
-def present(filename: str, pattern: str) -> bool:
-    """Check that ``pattern`` is present in ``filename``."""
+def include(filename: str, pattern: str) -> bool:
+    """Check that ``pattern`` is include in ``filename``."""
     with open(filename, "r") as data:
         return pattern in data.read()
 
 
 def exclude(filename: str, pattern: str) -> bool:
-    """Check that ``pattern`` is not present in ``filename``."""
-    return not present(filename, pattern)
+    """Check that ``pattern`` is not include in ``filename``."""
+    return not include(filename, pattern)
 
 
 def output_test(filename: str, pattern: str) -> bool:  # pylint: disable=unused-argument

@@ -72,11 +72,11 @@ and the table members are the input to that plugin.
 
 .. code-block:: toml
 
-    # The "present" checker will error unless the specified value is present.
-    [present]
+    # The "include" checker will error unless the specified value is include.
+    [include]
     "src/**/*.py" = "__all__"
 
-    # The "exclude" checker will error if the specified value is present.
+    # The "exclude" checker will error if the specified value is include.
     [exclude]
     "src/**/*.py" = "FooClassName"
 
@@ -88,7 +88,7 @@ In lower verbosity levels, ``not-grep`` only shows failed checks.
 .. code-block:: bash
 
     $ not-grep --config config.toml -vv
-    ================Running present checks================
+    ================Running include checks================
     -----------Checking src/**/*.py for pattern-----------
     __all__
     ******************************************************
