@@ -76,8 +76,8 @@ and the table members are the input to that plugin.
     [present]
     "src/**/*.py" = "__all__"
 
-    # The "not-present" checker will error if the specified value is present.
-    [not-present]
+    # The "exclude" checker will error if the specified value is present.
+    [exclude]
     "src/**/*.py" = "FooClassName"
 
 
@@ -95,7 +95,7 @@ In lower verbosity levels, ``not-grep`` only shows failed checks.
     src/foo/__init__.py.............................. PASS
     src/foo/bar.py................................... FAIL
 
-    ==============Running not-present checks==============
+    ================Running exclude checks================
     -----------Checking src/**/*.py for pattern-----------
     FooClassName
     ******************************************************

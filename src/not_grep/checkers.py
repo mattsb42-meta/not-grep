@@ -1,5 +1,5 @@
 """Built-in checkers."""
-__all__ = ("present", "not_present", "output_test")
+__all__ = ("present", "exclude", "output_test")
 
 
 def present(filename: str, pattern: str) -> bool:
@@ -8,7 +8,7 @@ def present(filename: str, pattern: str) -> bool:
         return pattern in data.read()
 
 
-def not_present(filename: str, pattern: str) -> bool:
+def exclude(filename: str, pattern: str) -> bool:
     """Check that ``pattern`` is not present in ``filename``."""
     return not present(filename, pattern)
 

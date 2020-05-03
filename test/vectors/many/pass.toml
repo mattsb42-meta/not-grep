@@ -1,7 +1,7 @@
 [present]
 "src/**/*.py" = "__all__"
 
-[not-present]
+[exclude]
 "src/**/*.py" = """
 This should be a unique value
 that is not present in any files.

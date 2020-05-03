@@ -14,5 +14,5 @@ If it ever is, that will be weird.
 "*.rst" = "pass"
 "**/*.py" = "fail"
 
-[not-present]
+[exclude]
 "src/**/*.py" = "__all__"

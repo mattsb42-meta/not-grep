@@ -76,7 +76,7 @@ setup(
         "console_scripts": ["not-grep=not_grep:cli"],
         "not_grep.checker": [
             "present=not_grep.checkers:present",
-            "not-present=not_grep.checkers:not_present",
+            "exclude=not_grep.checkers:exclude",
             "output-test=not_grep.checkers:output_test",
             "prefix=not_grep.checkers:prefix",
             "suffix=not_grep.checkers:suffix",

@@ -1,2 +1,2 @@
-[not-present]
+[exclude]
 "src/**/*.py" = "__all__"
