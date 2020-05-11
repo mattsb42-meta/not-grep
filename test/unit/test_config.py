@@ -25,17 +25,17 @@ def _config_test_cases():
         """
         [include]
         "src/**/*.py" = "include value"
-        
+
         [exclude]
         "docs/**/*.rst" = "antidisestablishmentarianism"
-        
+
         [output-test]
         "*.rst" = "pass"
         "**/*.py" = "fail"
-        
+
         [prefix]
         "*.md" = "my awesome prefix"
-        
+
         [suffix]
         "*.rst" = "\\n"
         """,

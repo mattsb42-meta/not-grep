@@ -1,5 +1,4 @@
 """Load not-grep checker plugins."""
-from functools import lru_cache
 from typing import Callable, Dict
 
 import click
@@ -9,7 +8,6 @@ __all__ = ("load_plugin", "PLUGIN_ENTRY_POINT")
 PLUGIN_ENTRY_POINT = "not_grep.checker"
 
 
-@lru_cache(maxsize=1)
 def _load_plugins() -> Dict[str, Callable[[str, str], bool]]:
     """Load all plugins and map them by name."""
 
