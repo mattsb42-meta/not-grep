@@ -4,8 +4,8 @@ __all__ = ("include", "exclude", "output_test")
 
 def include(filename: str, pattern: str) -> bool:
     """Check that ``pattern`` is include in ``filename``."""
-    with open(filename, "r") as data:
-        return pattern in data.read()
+    with open(filename, "rb") as data:
+        return pattern in data.read().decode("utf-8")
 
 
 def exclude(filename: str, pattern: str) -> bool:
@@ -23,9 +23,9 @@ def output_test(filename: str, pattern: str) -> bool:  # pylint: disable=unused-
 
 def prefix(filename: str, pattern: str) -> bool:
     """Check that ``filename`` starts with ``pattern``."""
-    with open(filename, "r") as data:
+    with open(filename, "rb") as data:
         data_prefix = data.read(len(pattern))
-        return data_prefix == pattern
+        return data_prefix.decode("utf-8") == pattern
 
 
 def suffix(filename: str, pattern: str) -> bool:
