@@ -31,7 +31,7 @@ def prefix(filename: str, pattern: str) -> bool:
 def suffix(filename: str, pattern: str) -> bool:
     """Check that ``filename`` ends with ``pattern``."""
     offset = -1 * len(pattern)
-    with open(filename, "r") as data:
+    with open(filename, "rb") as data:
         data.seek(offset, 2)
         data_suffix = data.read(len(pattern))
-        return data_suffix == pattern
+        return data_suffix.decode("utf-8") == pattern
