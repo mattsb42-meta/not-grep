@@ -70,6 +70,16 @@ setup(
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
-        "Programming Language :: Python :: Implementation :: CPython"
-    ]
+        "Programming Language :: Python :: Implementation :: CPython",
+    ],
+    entry_points={
+        "console_scripts": ["not-grep=not_grep:cli"],
+        "not_grep.checker": [
+            "include=not_grep.checkers:include",
+            "exclude=not_grep.checkers:exclude",
+            "output-test=not_grep.checkers:output_test",
+            "prefix=not_grep.checkers:prefix",
+            "suffix=not_grep.checkers:suffix",
+        ],
+    },
 )

@@ -1,0 +1,22 @@
+# This workflow runs the test vectors.
+name: Self-test
+
+on:
+  - pull_request
+  - push
+
+jobs:
+  self-check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        test-file:
+          - test/vectors/exclude/pass.toml
+          - test/vectors/include/pass.toml
+          - test/vectors/many/pass.toml
+          - test/vectors/ouput-check/pass.toml
+    steps:
+      - uses: mattsb42/not-grep@master
+        with:
+          debug: true
+          config-file: ${{ matrix.test-file }}

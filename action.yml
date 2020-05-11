@@ -1,0 +1,14 @@
+name: not-grep
+description: Kind of like grep, but not quite the same
+author: mattsb42
+inputs:
+    config-file:
+        description: Location of config file in repo
+        default: .github/not-grep.toml
+        required: false
+    debug:
+        description: Enables debug logging if set
+        required: false
+runs:
+    using: docker
+    image: Dockerfile
