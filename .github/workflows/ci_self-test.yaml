@@ -17,7 +17,7 @@ jobs:
           - test/vectors/output-check/pass.toml
     steps:
       - uses: actions/checkout@v2
-      - uses: mattsb42-meta/not-grep@master
+      - uses: ./
         with:
           debug: true
           config-file: ${{ matrix.test-file }}
