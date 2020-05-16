@@ -14,7 +14,7 @@ jobs:
           - test/vectors/exclude/pass.toml
           - test/vectors/include/pass.toml
           - test/vectors/many/pass.toml
-          - test/vectors/ouput-check/pass.toml
+          - test/vectors/output-check/pass.toml
     steps:
       - uses: actions/checkout@v2
       - uses: mattsb42-meta/not-grep@master
