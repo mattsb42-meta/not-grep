@@ -83,10 +83,10 @@ branches:
           - tests (windows-latest, 3.8, x64, local)
           - tests (windows-latest, 3.x, x64, local)
           # GitHub Action self-test
-          - Self-test / self-check (test/vectors/exclude/pass.toml)
-          - Self-test / self-check (test/vectors/include/pass.toml)
-          - Self-test / self-check (test/vectors/many/pass.toml)
-          - Self-test / self-check (test/vectors/output-check/pass.toml)
+          - self-check (test/vectors/exclude/pass.toml)
+          - self-check (test/vectors/include/pass.toml)
+          - self-check (test/vectors/many/pass.toml)
+          - self-check (test/vectors/output-check/pass.toml)
   - name: master
     protection:
       required_pull_request_reviews: null
@@ -118,7 +118,7 @@ branches:
           - tests (windows-latest, 3.8, x64, local)
           - tests (windows-latest, 3.x, x64, local)
           # GitHub Action self-test
-          - Self-test / self-check (test/vectors/exclude/pass.toml)
-          - Self-test / self-check (test/vectors/include/pass.toml)
-          - Self-test / self-check (test/vectors/many/pass.toml)
-          - Self-test / self-check (test/vectors/output-check/pass.toml)
+          - self-check (test/vectors/exclude/pass.toml)
+          - self-check (test/vectors/include/pass.toml)
+          - self-check (test/vectors/many/pass.toml)
+          - self-check (test/vectors/output-check/pass.toml)
