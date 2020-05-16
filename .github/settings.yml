@@ -50,9 +50,11 @@ labels:
 branches:
   - name: development
     protection:
-      required_pull_request_reviews:
-        required_approving_review_count: 1
-        dismiss_stale_reviews: true
+      # temporarily disable required pull request review
+      # until I have a solution to auto-approving me
+      required_pull_request_reviews: null
+#        required_approving_review_count: 1
+#        dismiss_stale_reviews: true
       restrictions: null
       enforce_admins: true
       required_status_checks:
