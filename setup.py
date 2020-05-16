@@ -49,7 +49,7 @@ setup(
     version=get_version(),
     packages=find_packages("src"),
     package_dir={"": "src"},
-    url="https://github.com/mattsb42/not-grep",
+    url="https://github.com/mattsb42-meta/not-grep",
     author="Matt Bullock",
     author_email="m@ttsb42.com",
     maintainer="Matt Bullock",
