@@ -60,6 +60,8 @@ branches:
       required_status_checks:
         strict: true
         contexts:
+          # Pull Request Requirements
+          - enforce-target
           # Static Analysis
           - analysis (bandit)
           - analysis (mypy)
@@ -93,6 +95,8 @@ branches:
       required_status_checks:
         strict: false
         contexts:
+          # Pull Request Requirements
+          - enforce-target
           # Static Analysis
           - analysis (bandit)
           - analysis (mypy)
