@@ -9,7 +9,7 @@ from ._run_checks import run
 
 __all__ = ("__version__", "cli")
 
-__version__ = "0.1.1"
+__version__ = "1.0.0"
 _DEBUG = "INPUT_DEBUG"
 _CONFIG_FILE = "INPUT_CONFIG-FILE"
 
