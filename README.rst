@@ -18,16 +18,12 @@ not-grep
    :target: https://not-grep.readthedocs.io
    :alt: Documentation Status
 
-.. important::
-
-    This project is a work in progress and is not yet ready for use.
-
-``not-grep`` is kind of like grep, but not quite the same.
+``not-grep`` is kind of like grep, but different.
 
 WAT?
 ====
 
-If you have ever found the need to inspect a file for particular patterns,
+If you have ever needed to inspect a file for particular patterns,
 you probably used ``grep``.
 
 .. code-block:: bash

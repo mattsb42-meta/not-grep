@@ -18,6 +18,11 @@ the `"changelog.d" directory
 
 .. towncrier release notes start
 
+1.0.0 -- 2020-05-16
+===================
+
+GitHub Action release.
+
 0.1.1 -- 2020-05-16
 ===================
 
