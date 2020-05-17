@@ -61,8 +61,9 @@ setup(
     install_requires=INSTALL_REQUIRES,
     dependency_links=DEPENDENCY_LINKS,
     classifiers=[
-        "Development Status :: 4 - Beta",
+        "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
+        "Topic :: Utilities",
         "Natural Language :: English",
         "License :: OSI Approved :: Apache Software License",
         "Programming Language :: Python",
