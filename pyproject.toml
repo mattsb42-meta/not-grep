@@ -1,0 +1,32 @@
+[tool.towncrier]
+    filename = "CHANGELOG.rst"
+    template = "changelog.d/towncrier_template.rst"
+    issue_format = "`#{issue} <https://github.com/python-attrs/attrs/issues/{issue}>`_"
+    directory = "changelog.d"
+    title_format = "{version} -- {project_date}"
+    underlines = ["=", "-"]
+
+    [[tool.towncrier.type]]
+    directory = "docs"
+    name = "Documentation"
+    showcontent = true
+
+    [[tool.towncrier.type]]
+    directory = "chore"
+    name = "Maintenance"
+    showcontent = true
+
+    [[tool.towncrier.type]]
+    directory = "fix"
+    name = "Bugfixes"
+    showcontent = true
+
+    [[tool.towncrier.type]]
+    directory = "feat"
+    name = "Features"
+    showcontent = true
+
+    [[tool.towncrier.type]]
+    directory = "breaking"
+    name = "Breaking Change"
+    showcontent = true
