@@ -32,8 +32,8 @@ jobs:
   #        uses: pascalgn/automerge-action@v0.8.1
   #        env:
   #          GITHUB_TOKEN: ${{ secrets.WRITE_TOKEN }}
-  #          # Do not merge if the "block merge" label is applied.
-  #          MERGE_LABELS: "!block merge"
+  #          # Do not merge if the "block-merge" label is applied.
+  #          MERGE_LABELS: "!block-merge"
   #          # Always do a squash commit.
   #          MERGE_METHOD: squash
   #          # Use GitHub's default merge commit message.
@@ -47,8 +47,8 @@ jobs:
         uses: pascalgn/automerge-action@v0.8.1
         env:
           GITHUB_TOKEN: ${{ secrets.WRITE_BOT_TOKEN }}
-          # Do not merge if the "block merge" label is applied.
-          MERGE_LABELS: "!block merge"
+          # Do not merge if the "block-merge" label is applied.
+          MERGE_LABELS: "!block-merge"
           # Always do a merge commit.
           # This is critical to keep master and development
           # histories in sync.
