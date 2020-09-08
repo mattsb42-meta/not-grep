@@ -63,7 +63,7 @@ branches:
         strict: true
         contexts:
           # Pull Request Requirements
-          - enforce-target
+          - route-pull-request
           # Static Analysis
           - analysis (bandit)
           - analysis (mypy)
@@ -98,7 +98,7 @@ branches:
         strict: false
         contexts:
           # Pull Request Requirements
-          - enforce-target
+          - route-pull-request
           # Static Analysis
           - analysis (bandit)
           - analysis (mypy)
