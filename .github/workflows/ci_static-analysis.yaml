@@ -25,3 +25,10 @@ jobs:
         env:
           TOXENV: ${{ matrix.stage }}
         run: tox -- -vv
+  prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - name: prettify
+        run: ./.github/prettify.sh check
