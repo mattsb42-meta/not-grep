@@ -2,10 +2,10 @@
 
 case "${1}" in
   write)
-    npx prettier --config .prettier.toml --write -- '**/*.md' '**/*.yaml' '**/*.yml'
+    npx prettier --config .prettier.toml --write -- '**/*.{md,yaml,yml}'
     ;;
   check)
-    npx prettier --config .prettier.toml --check -- '**/*.md' '**/*.yaml' '**/*.yml'
+    npx prettier --config .prettier.toml --check -- '**/*.{md,yaml,yml}'
     ;;
   *)
     echo "mode required!"
