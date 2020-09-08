@@ -39,11 +39,11 @@ def cli(config: Optional[str], verbose: int):
     if config is None:
         try:
             config = os.environ[_CONFIG_FILE]
-        except KeyError:
+        except KeyError as error:
             raise click.exceptions.BadOptionUsage(
                 option_name="config",
                 message=f"Config file must provided or set through environment '{_CONFIG_FILE}' variable",
-            )
+            ) from error
         if not os.path.isfile(config):
             raise click.BadOptionUsage(
                 option_name="config",
