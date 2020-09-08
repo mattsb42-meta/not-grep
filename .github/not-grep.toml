@@ -1,0 +1,3 @@
+[include]
+"src/**/*.py" = "__all__"
+"test/**/test_*.py" = "pytestmark"
