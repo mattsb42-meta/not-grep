@@ -31,5 +31,7 @@ def load_plugin(name: str) -> Callable[[str, str], bool]:
     plugins = _load_plugins()
     try:
         return plugins[name]
-    except KeyError:
-        raise click.exceptions.UsageError(f"No not-grep plugin found for name '{name}'")
+    except KeyError as error:
+        raise click.exceptions.UsageError(
+            f"No not-grep plugin found for name '{name}'"
+        ) from error
