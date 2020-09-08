@@ -46,6 +46,9 @@ labels:
   - name: next release
     color: 8D09F3
     description: Required for next release
+  - name: block-merge
+    color: ff0000
+    description: Do not automatically merge
 
 branches:
   - name: development
