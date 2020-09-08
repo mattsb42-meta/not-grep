@@ -25,12 +25,6 @@ jobs:
         env:
           TOXENV: ${{ matrix.stage }}
         run: tox -- -vv
-  not-grep:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: not-grep
-        uses: ./
   prettier:
     runs-on: ubuntu-latest
     steps:
