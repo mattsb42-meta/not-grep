@@ -43,7 +43,9 @@ class Config:
             # 2b. Add a check for the plugin for each requested glob and pattern.
             all_checks[checker_name] = [
                 SingleCheck(
-                    checker=checker_module, glob=glob_pattern, pattern=check_pattern,
+                    checker=checker_module,
+                    glob=glob_pattern,
+                    pattern=check_pattern,
                 )
                 for glob_pattern, check_pattern in checks.items()
             ]
