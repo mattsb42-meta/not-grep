@@ -1,4 +1,5 @@
 """Load not-grep checker plugins."""
+
 from typing import Callable, Dict
 
 import click

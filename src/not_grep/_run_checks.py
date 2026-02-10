@@ -1,4 +1,5 @@
 """Run the checks."""
+
 import shutil
 
 import click

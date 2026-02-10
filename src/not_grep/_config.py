@@ -1,4 +1,5 @@
 """Parse a config file."""
+
 import glob
 from typing import Callable, Iterable, Mapping, Sequence
 

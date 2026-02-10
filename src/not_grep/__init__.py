@@ -1,4 +1,5 @@
 """``not-grep`` is kind of like grep, but not quite the same."""
+
 import os
 from typing import Optional
 

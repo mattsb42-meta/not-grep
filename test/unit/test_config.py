@@ -1,4 +1,5 @@
 """Unit tests for ``not_grep._config``."""
+
 from typing import Dict
 
 import pytest

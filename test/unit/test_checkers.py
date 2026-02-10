@@ -1,4 +1,5 @@
 """Unit tests for ``not_grep.checkers``."""
+
 import pytest
 
 from not_grep import checkers
@@ -14,13 +15,11 @@ EXCLUDE_PATTERN = "exclude pattern"
 @pytest.fixture
 def source_file(tmpdir) -> str:
     source = tmpdir.join("source")
-    source.write(
-        f"""{PREFIX_PATTERN}
+    source.write(f"""{PREFIX_PATTERN}
     more data
     {INCLUDE_PATTERN}
     more data
-    {SUFFIX_PATTERN}"""
-    )
+    {SUFFIX_PATTERN}""")
     return str(source)
 
 
