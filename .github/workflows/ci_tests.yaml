@@ -13,9 +13,7 @@ jobs:
           - ubuntu-latest
           - windows-latest
           - macos-latest
-        python:
-          - "3.10"
-          - 3.x
+        python: ["3.10", "3.11", "3.12"]
         architecture:
           - x64
           - x86
@@ -28,8 +26,8 @@ jobs:
           - os: macos-latest
             architecture: x86
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v1
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
         with:
           python-version: ${{ matrix.python }}
           architecture: ${{ matrix.architecture }}
