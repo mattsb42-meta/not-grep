@@ -6,6 +6,10 @@ on:
     branches:
       - development
 
+permissions:
+  issues: write
+  pull-requests: write
+
 jobs:
   promote-to-master-pr:
     name: Promote dev branch to master
@@ -14,7 +18,7 @@ jobs:
       - name: promote
         uses: vsoch/pull-request-action@master
         env:
-          GITHUB_TOKEN: ${{ secrets.WRITE_BOT_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
           BRANCH_PREFIX: development
           PULL_REQUEST_BRANCH: master
           PULL_REQUEST_TITLE: Promote development to master
