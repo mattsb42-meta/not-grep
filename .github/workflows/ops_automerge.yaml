@@ -20,6 +20,10 @@ on:
       - completed
   status: {}
 
+permissions:
+  issues: write
+  pull-requests: write
+
 jobs:
   # Temporarily disable auto-merge to development until I have a solution for forks.
   #
@@ -46,7 +50,7 @@ jobs:
       - name: automerge
         uses: pascalgn/automerge-action@v0.8.1
         env:
-          GITHUB_TOKEN: ${{ secrets.WRITE_BOT_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
           # Do not merge if the "block-merge" label is applied.
           MERGE_LABELS: "!block-merge"
           # Always do a merge commit.
