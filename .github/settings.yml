@@ -70,21 +70,25 @@ branches:
           - analysis (lint)
           - prettier
           # Linux
-          - tests (ubuntu-latest, 3.7, x64, local)
-          - tests (ubuntu-latest, 3.8, x64, local)
-          - tests (ubuntu-latest, 3.x, x64, local)
-          # MacOS
-          - tests (macos-latest, 3.7, x64, local)
-          - tests (macos-latest, 3.8, x64, local)
-          - tests (macos-latest, 3.x, x64, local)
+          - tests (ubuntu-latest, 3.10, x64, local)
+          - tests (ubuntu-latest, 3.11, x64, local)
+          - tests (ubuntu-latest, 3.12, x64, local)
+          # MacOS x64
+          - tests (macos-latest, 3.10, x64, local)
+          - tests (macos-latest, 3.11, x64, local)
+          - tests (macos-latest, 3.12, x64, local)
+          # MacOS x86
+          - tests (macos-latest, 3.10, x86, local)
+          - tests (macos-latest, 3.11, x86, local)
+          - tests (macos-latest, 3.12, x86, local)
           # Windows x86
-          - tests (windows-latest, 3.7, x86, local)
-          - tests (windows-latest, 3.8, x86, local)
-          - tests (windows-latest, 3.x, x86, local)
+          - tests (windows-latest, 3.10, x86, local)
+          - tests (windows-latest, 3.11, x86, local)
+          - tests (windows-latest, 3.12, x86, local)
           # Windows x64
-          - tests (windows-latest, 3.7, x64, local)
-          - tests (windows-latest, 3.8, x64, local)
-          - tests (windows-latest, 3.x, x64, local)
+          - tests (windows-latest, 3.10, x64, local)
+          - tests (windows-latest, 3.11, x64, local)
+          - tests (windows-latest, 3.12, x64, local)
           # GitHub Action self-test
           - self-check (test/vectors/exclude/pass.toml)
           - self-check (test/vectors/include/pass.toml)
@@ -106,21 +110,25 @@ branches:
           - analysis (lint)
           - prettier
           # Linux
-          - tests (ubuntu-latest, 3.7, x64, local)
-          - tests (ubuntu-latest, 3.8, x64, local)
-          - tests (ubuntu-latest, 3.x, x64, local)
-          # MacOS
-          - tests (macos-latest, 3.7, x64, local)
-          - tests (macos-latest, 3.8, x64, local)
-          - tests (macos-latest, 3.x, x64, local)
+          - tests (ubuntu-latest, 3.10, x64, local)
+          - tests (ubuntu-latest, 3.11, x64, local)
+          - tests (ubuntu-latest, 3.12, x64, local)
+          # MacOS x64
+          - tests (macos-latest, 3.10, x64, local)
+          - tests (macos-latest, 3.11, x64, local)
+          - tests (macos-latest, 3.12, x64, local)
+          # MacOS x86
+          - tests (macos-latest, 3.10, x86, local)
+          - tests (macos-latest, 3.11, x86, local)
+          - tests (macos-latest, 3.12, x86, local)
           # Windows x86
-          - tests (windows-latest, 3.7, x86, local)
-          - tests (windows-latest, 3.8, x86, local)
-          - tests (windows-latest, 3.x, x86, local)
+          - tests (windows-latest, 3.10, x86, local)
+          - tests (windows-latest, 3.11, x86, local)
+          - tests (windows-latest, 3.12, x86, local)
           # Windows x64
-          - tests (windows-latest, 3.7, x64, local)
-          - tests (windows-latest, 3.8, x64, local)
-          - tests (windows-latest, 3.x, x64, local)
+          - tests (windows-latest, 3.10, x64, local)
+          - tests (windows-latest, 3.11, x64, local)
+          - tests (windows-latest, 3.12, x64, local)
           # GitHub Action self-test
           - self-check (test/vectors/exclude/pass.toml)
           - self-check (test/vectors/include/pass.toml)

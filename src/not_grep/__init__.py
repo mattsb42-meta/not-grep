@@ -1,4 +1,5 @@
 """``not-grep`` is kind of like grep, but not quite the same."""
+
 import os
 from typing import Optional
 
@@ -42,7 +43,7 @@ def cli(config: Optional[str], verbose: int):
         except KeyError as error:
             raise click.exceptions.BadOptionUsage(
                 option_name="config",
-                message=f"Config file must provided or set through environment '{_CONFIG_FILE}' variable",
+                message=f"Config file must provided or set through environment '{_CONFIG_FILE}' variable",  # noqa C0301
             ) from error
         if not os.path.isfile(config):
             raise click.BadOptionUsage(

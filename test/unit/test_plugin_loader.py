@@ -1,4 +1,5 @@
 """Unit tests for ``not_grep._plugin_loader``."""
+
 from collections import namedtuple
 
 import click

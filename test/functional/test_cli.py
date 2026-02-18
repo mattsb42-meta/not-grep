@@ -1,4 +1,5 @@
 """Black-box functional tests for the CLI."""
+
 import os
 from functools import partial
 
