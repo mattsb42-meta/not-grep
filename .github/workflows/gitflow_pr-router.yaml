@@ -3,6 +3,10 @@ name: pull request router
 
 on: [pull_request_target]
 
+permissions:
+  issues: write
+  pull-requests: write
+
 jobs:
   route-pull-request:
     runs-on: ubuntu-latest
@@ -12,7 +16,7 @@ jobs:
         if: github.base_ref == 'master' && github.head_ref != 'development'
         uses: actions/github-script@v3
         with:
-          github-token: ${{ secrets.WRITE_BOT_TOKEN }}
+          github-token: ${{ github.token }}
           script: |
             github.pulls.update({
               pull_number: context.issue.number,
