@@ -16,7 +16,7 @@ jobs:
           - test/vectors/many/pass.toml
           - test/vectors/output-check/pass.toml
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6
       - uses: ./
         with:
           debug: true

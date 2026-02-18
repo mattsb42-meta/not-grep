@@ -1,4 +1,5 @@
 """not-grep."""
+
 import io
 import os
 import re

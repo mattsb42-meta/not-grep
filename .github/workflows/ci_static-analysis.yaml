@@ -1,7 +1,11 @@
 # This workflow runs static analysis checks.
 name: static analysis
 
-on: [pull_request]
+on:
+  pull_request:
+    branches:
+      - development
+      - master
 
 jobs:
   analysis:
@@ -14,8 +18,8 @@ jobs:
           - mypy
           - bandit
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v1
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
         with:
           python-version: 3.x
       - run: |
@@ -28,7 +32,7 @@ jobs:
   prettier:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
       - name: prettify
         run: ./.github/prettify.sh check

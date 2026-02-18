@@ -1,5 +1,6 @@
 # pylint: disable=invalid-name
 """Sphinx configuration."""
+
 import io
 import os
 import re
@@ -29,7 +30,7 @@ def get_version():
     return _release
 
 
-project = u"not_grep"
+project = "not_grep"
 version = get_version()
 release = get_release()
 
@@ -55,7 +56,7 @@ templates_path = ["_templates"]
 source_suffix = ".rst"  # The suffix of source filenames.
 master_doc = "index"  # The master toctree document.
 
-copyright = u"%s, Amazon" % datetime.now().year  # pylint: disable=redefined-builtin
+copyright = f"{datetime.now().year}, Amazon"  # pylint: disable=redefined-builtin
 
 # List of directories, relative to source directory, that shouldn't be searched
 # for source files.
@@ -69,7 +70,7 @@ autodoc_member_order = "bysource"
 
 html_theme = "sphinx_rtd_theme"
 html_static_path = ["_static"]
-htmlhelp_basename = "%sdoc" % project
+htmlhelp_basename = f"{project}doc"
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {"python": ("http://docs.python.org/", None)}
