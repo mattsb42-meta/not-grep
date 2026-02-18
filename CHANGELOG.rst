@@ -18,6 +18,12 @@ the `"changelog.d" directory
 
 .. towncrier release notes start
 
+1.0.1 -- 2026-02-18
+===================
+
+Action Maintenance.
+Require setuptools less than 81.0.0
+
 1.0.0 -- 2020-05-16
 ===================
 
