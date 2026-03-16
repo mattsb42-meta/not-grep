@@ -108,6 +108,6 @@ Yes. Yes you can.
     - uses: mattsb42/not-grep@master
       with:
         # If you don't set config-file the action uses ".github/not-grep.toml".
-        config-file: ./github/config/check-things.toml
+        config-file: .github/config/check-things.toml
         # If you don't set debug, passing checks will be hidden.
         debug: true
